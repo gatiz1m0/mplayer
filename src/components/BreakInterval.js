@@ -6,7 +6,7 @@ function BreakInterval(props) {
     <section>
       <p>{props.breakInterval}</p>
     </section>
-  )
+  );
 }
 
 export default BreakInterval
