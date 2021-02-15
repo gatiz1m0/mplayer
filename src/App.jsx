@@ -2,12 +2,23 @@ import React from "react";
 
 import "./App.css";
 
-function App() {
-  return (
-    <div className="App">
-      <p>Hello app</p>
-    </div>
-  );
+class App extends React.Component {
+  constructor() {
+    super();
+    
+    this.state = {
+      breakLength: 5,
+      sessionLength: 25
+    }
+  }
+  
+  render() {
+    return (
+      <main>
+        <h2>Do it! Clock</h2>
+      </main>
+    );
+  }
 }
 
 export default App;
