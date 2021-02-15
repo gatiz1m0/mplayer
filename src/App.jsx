@@ -1,7 +1,7 @@
 import React from "react";
 
 import "./App.css";
-import BreakInterval from '/components/BreakInterval'
+import BreakInterval from './components/BreakInterval'
 
 class App extends React.Component {
   constructor() {
