@@ -17,7 +17,7 @@ class App extends React.Component {
     return (
       <main>
         <h2>Do it! Clock</h2>
-        <BreakInterval />
+        <BreakInterval breakInterval={this.state.breakLength}/>
       </main>
     );
   }
