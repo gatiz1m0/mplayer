@@ -13,8 +13,10 @@ class Timer extends React.Component {
   }
   render() {
     return(
-      <section>
-        <section className="timer">
+      <section>       
+        <div className="timer-area">
+          <button>▶❚❚</button>
+          <section className="timer">
           <h4 className="session">{this.state.isSession === true ?
               "Session" : "Break"}</h4>
           <span>{this.props.timerMinutes}</span>
@@ -23,9 +25,6 @@ class Timer extends React.Component {
             this.state.timerSeconds < 10 ? "0" + this.state.timerSeconds :
             this.state.timerSeconds}</span>
         </section>
-        <div className="timer-area">
-          <button>▶❚❚</button>
-          
           <button>Set</button>
         </div>
       </section>

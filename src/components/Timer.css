@@ -2,7 +2,9 @@
   display: flex;
   font-size: 28px !important;
   margin: 10px;
-  background-color: yellow;
+  padding: 0 10px;
+  background-color: #e7e7e7;
+  border-radius: 20px;
 }
 
 .session {
