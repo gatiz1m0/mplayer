@@ -16,6 +16,14 @@ class App extends React.Component {
     }
   }
   
+  onIncreaseLength() {
+    this.setState( (prevState) => {
+      return {
+        breakLenght: prevState.breakLength + 1
+      }
+    })
+  }
+  
   render() {
     return (
       <div className='main'>
@@ -34,7 +42,7 @@ class App extends React.Component {
           </section>
         </div>
         <div className="timer-area">
-          <button>▶▌▌</button>
+          <button>▶❚❚</button>
           <Timer timerMinutes={this.state.timerMinutes} className="timer" />
           <button>Set</button>
         </div>
