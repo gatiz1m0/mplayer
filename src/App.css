@@ -37,12 +37,12 @@ main {
   background-color: #e8e8e8;
   border-radius: 20px;
   display: flex;
+  align-items: center;
   font-size: 28px !important;
 }
 
 button {
   border-radius: 30px;
-  padding: 6px 12px;
   margin: 0 15px;
   height: 32px;
   width: 60px;
@@ -51,4 +51,5 @@ button {
   outline: none;
   cursor: pointer;
   color: #f8f8f8;
+  font-weight: 700;
 }
