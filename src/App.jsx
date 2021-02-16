@@ -34,9 +34,9 @@ class App extends React.Component {
           </section>
         </div>
         <div className="timer-area">
-          <button></button>
+          <button>▶▌▌</button>
           <Timer timerMinutes={this.state.timerMinutes} className="timer" />
-          <button></button>
+          <button>Set</button>
         </div>
       </div>
     );
