@@ -12,3 +12,13 @@
   padding:1px 10px;
   margin: 5px;
 }
+
+.timer-area {
+  display: flex;
+}
+
+.timer-area > button {
+  margin-top: 10px;
+  height: 35px;
+  width: 57px;
+}

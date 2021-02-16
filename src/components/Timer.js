@@ -23,7 +23,13 @@ class Timer extends React.Component {
             this.state.timerSeconds < 10 ? "0" + this.state.timerSeconds :
             this.state.timerSeconds}</span>
         </section>
+        <div className="timer-area">
+          <button>▶❚❚</button>
+          
+          <button>Set</button>
+        </div>
       </section>
+      
     )
   }
 }
