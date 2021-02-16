@@ -1,8 +1,31 @@
 main {
   display: flex;
+  flex-direction: column;
   height: 90vh;
+  justify-content: center;
+  align-items: center;
 }
 
-h2 {
+title h2 h3 {
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.interval-container {
+  display: flex;
+  margin: 0 10px;
+}
+
+.setters {
+  display: flex;
+}
+
+button {
+  padding: 3px 8px;
+  margin: 0 5px;
+  height: 20px;
+  background-color: #424252;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: #f8f8f8;
 }
