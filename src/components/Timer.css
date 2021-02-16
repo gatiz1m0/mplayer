@@ -1,0 +1,9 @@
+.timer {
+  display: flex;
+  font-size: 28px !important;
+  margin: 10px;
+}
+
+.session {
+  margin: 0 10px;
+}

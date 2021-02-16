@@ -1,5 +1,7 @@
 import React from 'react'
 
+import './Timer.css'
+
 class Timer extends React.Component {
   constructor() {
     super();
@@ -12,8 +14,8 @@ class Timer extends React.Component {
   render() {
     return(
       <section>
-        <section>
-          <h4>{this.props.isSession === true ? "Session" : "Break"}</h4>
+        <section className="timer">
+          <h4 className="session">{this.props.isSession === true ? "Session" : "Break"}</h4>
           <span>{this.props.timerMinute}</span>
           <span>:</span>
           <span>{this.state.timerSecond === 0 ? "00" : this.state.timerMinute < 10 ? "0" + this.state.timerSecond : this.state.timerSecond}</span>

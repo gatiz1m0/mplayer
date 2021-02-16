@@ -27,7 +27,7 @@ class App extends React.Component {
           <BreakInterval breakInterval={this.state.breakLength}/>
           <SessionLength sessionLength={this.sessionLength} />
         </section>
-        <Timer timerMinute={this.state.timerMinute} />
+        <Timer timerMinute={this.state.timerMinute} className="timer" />
       </main>
     );
   }
