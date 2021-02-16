@@ -18,7 +18,7 @@ class App extends React.Component {
   
   render() {
     return (
-      <main>
+      <div className='main'>
         <div className="title">
           <h2>Do it!  </h2>
           <h3>Pomodoro Clock</h3>
@@ -34,7 +34,7 @@ class App extends React.Component {
           </section>
         </div>
         <Timer timerMinutes={this.state.timerMinutes} className="timer" />
-      </main>
+      </div>
     );
   }
 }
