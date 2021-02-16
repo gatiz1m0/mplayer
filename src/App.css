@@ -41,3 +41,13 @@ h4 {
   display: flex;
   align-items: center;
 }
+
+.timer-area {
+  display: flex;
+}
+
+.timer-area > button {
+  
+  height: 30px;
+  width: 55px;
+}

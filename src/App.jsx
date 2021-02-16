@@ -33,7 +33,11 @@ class App extends React.Component {
             <SessionLength sessionLength={this.state.sessionLength} />
           </section>
         </div>
-        <Timer timerMinutes={this.state.timerMinutes} className="timer" />
+        <div className="timer-area">
+          <button></button>
+          <Timer timerMinutes={this.state.timerMinutes} className="timer" />
+          <button></button>
+        </div>
       </div>
     );
   }
