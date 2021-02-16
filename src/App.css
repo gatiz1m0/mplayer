@@ -17,7 +17,7 @@ main {
 }
 
 .title h2 {
-  padding: 3px;
+  padding: 2px;
 }
 
 .title h3 {
@@ -30,6 +30,11 @@ main {
 }
 
 h4 {
-  font-size: 18px !important;
-  margin: 2px 10px;;
+  font-size: 16px !important;
+ 
+}
+
+.setters-area {
+  display: flex;
+  align-items: center;
 }

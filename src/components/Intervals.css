@@ -1,20 +1,21 @@
 .interval-container { 
   margin: 0 5px;
-  width: 240px;
+  width: 180px;
+  height: 36px;
   background-color: #e8e8e8;
   border-radius: 20px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
   font-size: 20px !important;
 }
 
 
 button {
   border-radius: 20px;
-  margin: 0 15px;
+  margin: 2px 10px;
   height: 28px;
-  width: 60px;
+  width: 50px;
   background-color: #f84f22;
   border: none;
   outline: none;
