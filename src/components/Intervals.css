@@ -1,6 +1,6 @@
 .interval-container { 
   margin: 0 5px;
-  width: 180px;
+  width: 150px;
   height: 36px;
   background-color: #e7e7e7;
   border-radius: 20px;
@@ -14,8 +14,8 @@
 button {
   border-radius: 20px;
   margin: 2px 5px;
-  height: 28px;
-  width: 50px;
+  height: 25px;
+  width: 45px;
   background-color: #f84f22;
   border: none;
   outline: none;
