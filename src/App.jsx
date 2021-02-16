@@ -19,7 +19,10 @@ class App extends React.Component {
   render() {
     return (
       <main>
-        <span className="title"><h2>Do it! </h2><h3>Pomodoro Clock</h3></span>
+        <div className="title">
+          <h2>Do it!  </h2>
+          <h3>Pomodoro Clock</h3>
+        </div>
         <section className="setters">
           <BreakInterval breakInterval={this.state.breakLength}/>
           <SessionLength sessionLength={this.sessionLength} />
