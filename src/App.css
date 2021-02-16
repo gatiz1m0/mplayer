@@ -33,17 +33,6 @@ main {
   margin: 5px 10px;
 }
 
-.setters { 
-  margin: 0 5px;
-  width: 300px;
-  background-color: #e8e8e8;
-  border-radius: 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 28px !important;
-}
-
 button {
   border-radius: 30px;
   margin: 0 15px;

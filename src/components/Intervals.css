@@ -1,0 +1,10 @@
+.interval-container { 
+  margin: 0 5px;
+  width: 220px;
+  background-color: #e8e8e8;
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 24px !important;
+}

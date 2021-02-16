@@ -1,5 +1,7 @@
 import React from 'react'
 
+import './Intervals.css'
+
 function SessionLength (props) {
   
   return(

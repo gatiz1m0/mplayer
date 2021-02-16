@@ -1,5 +1,7 @@
 import React from 'react'
 
+import './Intervals.css'
+
 function BreakInterval(props) {
   
   return (

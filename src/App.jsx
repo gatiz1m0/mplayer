@@ -23,11 +23,11 @@ class App extends React.Component {
           <h2>Do it!  </h2>
           <h3>Pomodoro Clock</h3>
         </div>
-        <section className="setters">
+        <section>
           <h4>Break length</h4>
           <BreakInterval breakInterval={this.state.breakLength} />
         </section>
-        <section className="setters">
+        <section>
           <h4>Session length</h4>
           <SessionLength sessionLength={this.state.sessionLength} />
         </section>
