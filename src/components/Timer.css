@@ -2,10 +2,13 @@
   display: flex;
   font-size: 28px !important;
   margin: 10px;
+  background-color: yellow;
 }
 
 .session {
   margin: 0 10px;
   display: flex;
   align-items: center;
+  padding:1px 10px;
+  margin: 5px;
 }
