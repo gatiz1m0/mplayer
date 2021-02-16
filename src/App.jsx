@@ -24,7 +24,11 @@ class App extends React.Component {
           <h3>Pomodoro Clock</h3>
         </div>
         <section className="setters">
+          <h4>Break length</h4>
           <BreakInterval breakInterval={this.state.breakLength} />
+        </section>
+        <section className="setters">
+          <h4>Session length</h4>
           <SessionLength sessionLength={this.state.sessionLength} />
         </section>
         <Timer timerMinutes={this.state.timerMinutes} className="timer" />
