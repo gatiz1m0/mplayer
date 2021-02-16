@@ -5,7 +5,7 @@ function SessionLength (props) {
   return(
     <section className="interval-container">
     <button>Up</button>
-    <p>{props.SessionLength}</p>
+    <p>{props.sessionLength}</p>
     <button>Down</button>
     </section>
   )
