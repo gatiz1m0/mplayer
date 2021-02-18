@@ -9,13 +9,9 @@ class Timer extends React.Component {
     this.state = {
       inSession: true,
       timerSeconds: 0,
-      intervalId: 0
+      intervalId: 0,
+      onPlay: false
     }
-    
-    const playSymbol = "▶";
-    const pauseSymbol ="❚❚";
-    let symbol = "test"//this.playSymbol;
-    let onPlay = false;
 
     this.playStop = this.playStop.bind(this)
     this.reset = this.reset.bind(this)
@@ -23,17 +19,19 @@ class Timer extends React.Component {
   }
   
   playStop() {
-    this.onPlay = !this.onPlay;
+    this.onPlay = this.setState( (prevState) => {
+      return {
+        onPlay: !prevState.onPlay
+      }
+    })
     
     if(this.onPlay){
-      this.symbol = this.pauseSymbol;
       let intervalId = setInterval(this.decreaseTimer, 1000);
 
       this.setState({
         intervalId: intervalId
       })
     } else {
-      this.symbol = this.playSymbol;
       clearInterval(this.state.intervalId)
     }
   }
@@ -57,14 +55,14 @@ class Timer extends React.Component {
   }
 
   reset() {
-
+    
   }
-  
+ 
   render() {
     return(
       <section>       
         <div className="timer-area">
-          <button onClick={this.playStop}>{this.symbol}</button>
+          <button onClick={this.playStop}>{this.onPlay ? "❚❚" : "▶"}</button>
           <section className="timer">
           <h4 className="session">{this.state.inSession === true ?
               "Session" : "Break"}</h4>
