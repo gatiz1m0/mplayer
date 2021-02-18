@@ -17,6 +17,8 @@ class Pomodoro extends React.Component {
     
     this.onIncreaseBreakLength = this.onIncreaseBreakLength.bind(this)
     this.onDecreaseBreakLength = this.onDecreaseBreakLength.bind(this)
+    this.onDecreaseSessionLength = this.onDecreaseSessionLength.bind(this)
+    this.onDecreaseSessionLength = this.onDecreaseSessionLength.bind(this)
   }
   
   onIncreaseBreakLength() {
@@ -31,6 +33,22 @@ class Pomodoro extends React.Component {
     this.setState( (prevState) => {
       return {
         breakLength: prevState.breakLength - 1
+      }
+    })
+  }
+  
+  onIncreaseSessionLength() {
+    this.setState( (prevState) => {
+      return {
+        breakLength: prevState.sessionLength + 1
+      }
+    })
+  }
+  
+  onDecreaseSessionLength() {
+    this.setState( (prevState) => {
+      return {
+        breakLength: prevState.sessionLength - 1
       }
     })
   }

@@ -20,9 +20,9 @@ function BreakInterval(props) {
   
   return (
     <section className="interval-container">
-      <button onClick={increaseCounter}>Up</button>
+      <button onClick={decreaseCounter}>Down</button>      
       <p>{props.breakInterval}</p>
-      <button onClick={decreaseCounter}>Down</button>
+      <button onClick={increaseCounter}>Up</button>
     </section>
   );
 }
