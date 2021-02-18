@@ -18,7 +18,7 @@ class Timer extends React.Component {
 
     this.play = this.play.bind(this)
     this.reset = this.reset.bind(this)
-    this.decreaseTimer = this.decreaseTimer.bond(this)
+    this.decreaseTimer = this.decreaseTimer.bind(this)
   }
   
   play() {
@@ -32,9 +32,18 @@ class Timer extends React.Component {
   decreaseTimer() {
     switch(this.state.timerSeconds) {
       case 0:
-        this.setState( (prevState) => {
-          return 
+        this.props.updateTimerMinutes();
+        this.setState({
+          timerSeconds: 59
         })
+        break;
+      default:
+        this.setState( (prevState) => {
+          return {
+            timerSeconds: prevState.timerSeconds - 1
+          }
+        })
+        break;
     }
   }
 
