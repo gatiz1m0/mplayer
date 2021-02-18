@@ -12,7 +12,7 @@ class Timer extends React.Component {
     }
     
     this.play = this.play.bind(this)
-    this.reset = this.reset.
+    this.reset = this.reset.bind(this)
   }
   
   render() {
