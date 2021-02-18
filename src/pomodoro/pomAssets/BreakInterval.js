@@ -8,7 +8,7 @@ function BreakInterval(props) {
     if(props.breakInterval === 1)
       return;
     
-    props.increaseBreak();
+    props.increaseBreak;
   }
   
   const decreaseCounter = () => {

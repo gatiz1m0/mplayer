@@ -38,7 +38,7 @@ class Pomodoro extends React.Component {
             <h4>Break length</h4>
             <BreakInterval
               breakInterval={this.state.breakLength} 
-              increaseBreak={this.state.onIncreaseBreakLenght}
+              increaseBreak={this.state.onIncreaseBreakLength}
             />
           </section>
           <section>
