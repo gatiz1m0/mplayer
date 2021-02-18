@@ -48,14 +48,13 @@ class Pomodoro extends React.Component {
             <BreakInterval
               breakInterval={this.state.breakLength} 
               increaseBreak={this.onIncreaseBreakLength}
-              decreaseBreak={this.onIncreaseBreakLength}
+              decreaseBreak={this.onDecreaseBreakLength}
             />
           </section>
           <section>
             <h4>Session length</h4>
             <SessionLength 
               sessionLength={this.state.sessionLength} 
-              decreaseBreak={this.onIncreaseBreakLength}
             />
           </section>        
         </div>
