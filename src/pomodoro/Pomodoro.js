@@ -16,7 +16,7 @@ class Pomodoro extends React.Component {
     }
   }
   
-  onIncreaseLength() {
+  onIncreaseBreakLength() {
     this.setState( (prevState) => {
       return {
         breakLenght: prevState.breakLength + 1

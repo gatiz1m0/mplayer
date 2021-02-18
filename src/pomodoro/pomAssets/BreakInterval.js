@@ -4,9 +4,17 @@ import './Intervals.css'
 
 function BreakInterval(props) {
   
+  const increaseCounter = () => {
+    
+  }
+  
+  const decreaseCounter = () => {
+    
+  }
+  
   return (
     <section className="interval-container">
-      <button onClick={icreaseCounter}>Up</button>
+      <button onClick={increaseCounter}>Up</button>
       <p>{props.breakInterval}</p>
       <button onClick={decreaseCounter}>Down</button>
     </section>
