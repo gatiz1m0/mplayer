@@ -16,7 +16,7 @@ class Timer extends React.Component {
     return(
       <section>       
         <div className="timer-area">
-          <button>▶❚❚</button>
+          <button >▶❚❚</button>
           <section className="timer">
           <h4 className="session">{this.state.isSession === true ?
               "Session" : "Break"}</h4>
