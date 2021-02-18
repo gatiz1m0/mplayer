@@ -11,6 +11,7 @@ class Timer extends React.Component {
       timerSeconds: 0
     }
   }
+  
   render() {
     return(
       <section>       
