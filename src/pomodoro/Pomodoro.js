@@ -14,6 +14,8 @@ class Pomodoro extends React.Component {
       sessionLength: 25,
       timerMinutes: 25
     }
+    
+    this.onIncreaseBreakLength = this.onIncreaseBreakLength.bind(this)
   }
   
   onIncreaseBreakLength() {
@@ -34,7 +36,10 @@ class Pomodoro extends React.Component {
         <div className="setters-area">
           <section>
             <h4>Break length</h4>
-            <BreakInterval breakInterval={this.state.breakLength} />
+            <BreakInterval
+              breakInterval={this.state.breakLength} 
+              increaseBreak={this.state.onIncreaseBreakLenght}
+            />
           </section>
           <section>
             <h4>Session length</h4>
@@ -42,7 +47,9 @@ class Pomodoro extends React.Component {
           </section>        
         </div>
         <div className="timer-area">
-            <Timer timerMinutes={this.state.timerMinutes} className="timer" />
+            <Timer
+              timerMinutes={this.state.timerMinutes}
+              className="timer" />
           </div>
       </div>
     );
