@@ -11,6 +11,8 @@ class Timer extends React.Component {
       timerSeconds: 0
     }
     
+    
+    
     this.play = this.play.bind(this)
     this.reset = this.reset.bind(this)
   }
