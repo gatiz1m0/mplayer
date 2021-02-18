@@ -5,14 +5,14 @@ import './Intervals.css'
 function BreakInterval(props) {
   
   const increaseCounter = () => {
-    if(props.breakInterval === 1)
+    if(props.breakInterval === 59)
       return;
     
-    props.increaseBreak;
+    props.increaseBreak();
   }
   
   const decreaseCounter = () => {
-    if(props.breakInterval === 60)
+    if(props.breakInterval === 1)
       return;
   }
   

@@ -16,12 +16,21 @@ class Pomodoro extends React.Component {
     }
     
     this.onIncreaseBreakLength = this.onIncreaseBreakLength.bind(this)
+    this.onDecreaseBreakLength = this.onDecreaseBreakLength.bind(this)
   }
   
   onIncreaseBreakLength() {
     this.setState( (prevState) => {
       return {
-        breakLenght: prevState.breakLength + 1
+        breakLength: prevState.breakLength + 1
+      }
+    })
+  }
+  
+  onDecreaseBreakLength() {
+    this.setState( (prevState) => {
+      return {
+        breakLength: prevState.breakLength - 1
       }
     })
   }
@@ -38,7 +47,7 @@ class Pomodoro extends React.Component {
             <h4>Break length</h4>
             <BreakInterval
               breakInterval={this.state.breakLength} 
-              increaseBreak={this.state.onIncreaseBreakLength}
+              increaseBreak={this.onIncreaseBreakLength}
             />
           </section>
           <section>
