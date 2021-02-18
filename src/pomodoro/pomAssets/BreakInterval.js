@@ -20,7 +20,7 @@ function BreakInterval(props) {
   
   return (
     <section className="interval-container">
-      <button onClick={decreaseCounter}>Down</button>      
+      <button onClick={decreaseCounter}>▼</button>      
       <p>{props.breakInterval}</p>
       <button onClick={increaseCounter}>▲</button>
     </section>
