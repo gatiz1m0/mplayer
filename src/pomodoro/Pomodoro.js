@@ -84,7 +84,7 @@ class Pomodoro extends React.Component {
               className="timer" />
           </div>
       </div>
-    );
+  );
   }
 }
 

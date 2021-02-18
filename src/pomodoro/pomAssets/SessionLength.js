@@ -11,7 +11,7 @@ function SessionLength (props) {
   }
   
   const decreaseSession = () => {
-    if(props.sessionLength < 1)
+    if(props.sessionLength <= 1)
       return;
     
     props.decreaseSession();
