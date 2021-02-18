@@ -14,6 +14,8 @@ function BreakInterval(props) {
   const decreaseCounter = () => {
     if(props.breakInterval === 1)
       return;
+    
+    props.decreaseBreak();
   }
   
   return (
