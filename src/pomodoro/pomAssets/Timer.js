@@ -7,7 +7,7 @@ class Timer extends React.Component {
     super();
     
     this.state = {
-      isSession: true,
+      inSession: true,
       timerSeconds: 0
     }
   }
