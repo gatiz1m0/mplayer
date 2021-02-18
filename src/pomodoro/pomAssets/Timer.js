@@ -14,19 +14,28 @@ class Timer extends React.Component {
     
     const playSymbol = "▶";
     const pauseSymbol ="❚❚";
-    let symbol = playSymbol;
+    let symbol = "test"//this.playSymbol;
+    let onPlay = false;
 
-    this.play = this.play.bind(this)
+    this.playStop = this.playStop.bind(this)
     this.reset = this.reset.bind(this)
     this.decreaseTimer = this.decreaseTimer.bind(this)
   }
   
-  play() {
-    let intervalId = setInterval(this.decreaseTimer, 1000);
+  playStop() {
+    this.onPlay = !this.onPlay;
     
-    this.setState({
-      intervalId: intervalId
-    })
+    if(this.onPlay){
+      this.symbol = this.pauseSymbol;
+      let intervalId = setInterval(this.decreaseTimer, 1000);
+
+      this.setState({
+        intervalId: intervalId
+      })
+    } else {
+      this.symbol = this.playSymbol;
+      clearInterval(this.state.intervalId)
+    }
   }
   
   decreaseTimer() {
@@ -55,9 +64,9 @@ class Timer extends React.Component {
     return(
       <section>       
         <div className="timer-area">
-          <button onClick={this.play}>{this.symbol}</button>
+          <button onClick={this.playStop}>{this.symbol}</button>
           <section className="timer">
-          <h4 className="session">{this.state.isSession === true ?
+          <h4 className="session">{this.state.inSession === true ?
               "Session" : "Break"}</h4>
           <span>{this.props.timerMinutes}</span>
           <span>:</span>
