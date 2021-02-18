@@ -1,9 +1,9 @@
 import React from "react";
 
 import "./Pomodoro.css";
-import BreakInterval from './components/BreakInterval'
-import SessionLength from './components/SessionLength'
-import Timer from './components/Timer'
+import BreakInterval from './pomAssets/BreakInterval'
+import SessionLength from './pomAssets/SessionLength'
+import Timer from './pomAssets/Timer'
 
 class Pomodoro extends React.Component {
   constructor() {

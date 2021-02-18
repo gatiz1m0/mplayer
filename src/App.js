@@ -1,14 +1,10 @@
 import React from "react";
 
-import Pomodoro from "./components/Pomodoro"
+import Pomodoro from "./pomodoro/Pomodoro"
 
-class App extends React.Component {
-  constructor() {
-    super();
+const App = () => {
 
-  }
-  
-  render() {
+
     return (
       <div>
         <Pomodoro />
