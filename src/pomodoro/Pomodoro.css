@@ -24,10 +24,11 @@
 
 .title h2 {
   padding: 2px;
+  font-size: 16;
 }
 
 .title h3 {
-  font-size: 17px;
+  font-size: 14px;
   background-color: orange;
   color: white;
   border-radius: 20px;
