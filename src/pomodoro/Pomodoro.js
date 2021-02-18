@@ -17,7 +17,7 @@ class Pomodoro extends React.Component {
     
     this.onIncreaseBreakLength = this.onIncreaseBreakLength.bind(this)
     this.onDecreaseBreakLength = this.onDecreaseBreakLength.bind(this)
-    this.onDecreaseSessionLength = this.onDecreaseSessionLength.bind(this)
+    this.onIncreaseSessionLength = this.onIncreaseSessionLength.bind(this)
     this.onDecreaseSessionLength = this.onDecreaseSessionLength.bind(this)
   }
   
@@ -40,7 +40,8 @@ class Pomodoro extends React.Component {
   onIncreaseSessionLength() {
     this.setState( (prevState) => {
       return {
-        sessionLength: prevState.sessionLength + 1
+        sessionLength: prevState.sessionLength + 1,
+        timerMinutes: prevState.breakLength + 1
       }
     })
   }
@@ -48,9 +49,14 @@ class Pomodoro extends React.Component {
   onDecreaseSessionLength() {
     this.setState( (prevState) => {
       return {
-        sessionLength: prevState.sessionLength - 1
+        sessionLength: prevState.sessionLength - 1,
+        timerMinutes: prevState.breakLength - 1
       }
     })
+  }
+  
+  onUpdateTimerMinutes() {
+    this.setState( )
   }
   
   render() {
@@ -58,7 +64,7 @@ class Pomodoro extends React.Component {
       <div className='main'>
         <div className="title">
           <h2>Do it!  </h2>
-          <h3>Pomodoro Clock</h3>
+          <h3>Study Clock</h3>
         </div>
         <div className="setters-area">
           <section>
@@ -81,6 +87,7 @@ class Pomodoro extends React.Component {
         <div className="timer-area">
             <Timer
               timerMinutes={this.state.timerMinutes}
+              breakLength={this.state.breakLength}
               className="timer" />
           </div>
       </div>
