@@ -4,13 +4,12 @@ import Pomodoro from "./pomodoro/Pomodoro"
 
 const App = () => {
 
+  return (
+    <div>
+      <Pomodoro />
+    </div>
+  );
 
-    return (
-      <div>
-        <Pomodoro />
-      </div>
-    );
-  }
 }
 
 export default App;
