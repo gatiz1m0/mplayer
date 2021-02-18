@@ -73,6 +73,8 @@ class Pomodoro extends React.Component {
             <h4>Session length</h4>
             <SessionLength 
               sessionLength={this.state.sessionLength} 
+              increaseSession={this.onIncreaseSessionLength}
+              decreaseSession={this.onDecreaseSessionLength}
             />
           </section>        
         </div>
