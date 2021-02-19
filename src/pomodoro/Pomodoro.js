@@ -59,18 +59,18 @@ class Pomodoro extends React.Component {
           breakLength: 59,
           timerMinutes: 59
         }
-      } else if(prevState.breakLength <= 1) {
-        if(!this.state.inSession){
+    } else if(prevState.breakLength <= 1) {
+        return {
+          breakLength: length - 1
+        }
+      } else {
+        if(!this.state.inSession ) {
           return {
-            breakLength: length - 1
-          }
+            breakLength: length - 1,
+            timerMinutes: length - 1
+          }    
         } else {
-          if(!this.state.inSession ) {
-            return {
-              breakLength: length - 1,
-              timerMinutes: length - 1
-            }
-          } else {
+          return {
             breakLength: length - 1
           }
         }
