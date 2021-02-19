@@ -82,8 +82,9 @@ class Timer extends React.Component {
           <section className="timer">
             <h4 className="session">{this.state.inSession === true ?
                 "Session" : "Break"}</h4>
-            <span>{this.props.timerMinutes <= 10 ? "0" : this.state.timerMinutes :
-              this.state.timerMinutes}
+            <span>{this.props.timerMinutes === 0 ? "00" :
+              this.props.timerMinutes < 10 ? "0" + this.props.timerMinutes :
+              this.props.timerMinutes}
             </span>
             <span>:</span>
             <span>{this.state.timerSeconds === 0 ? "00" :
@@ -93,8 +94,7 @@ class Timer extends React.Component {
           </section>
           <button onClick={this.reset}>Set</button>
         </div>
-      </section>
-      
+      </section>      
     )
   }
 }
