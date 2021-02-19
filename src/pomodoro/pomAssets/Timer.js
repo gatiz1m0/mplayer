@@ -19,13 +19,14 @@ class Timer extends React.Component {
   }
   
   playStop() {
-    this.onPlay = this.setState( (prevState) => {
+    this.setState( (prevState) => {
       return {
         onPlay: !prevState.onPlay
       }
     })
+    //console.log("onPlay is " + this.state.onPlay)
     
-    if(this.onPlay){
+    if(this.state.onPlay){
       let intervalId = setInterval(this.decreaseTimer, 1000);
 
       this.setState({
