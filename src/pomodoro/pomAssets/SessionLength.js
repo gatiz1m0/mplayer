@@ -4,8 +4,8 @@ import './Intervals.css'
 
 function SessionLength (props) {
   const increaseSession = () => {
-    if(props.sessionLength >= 59)
-      return;
+    // if(props.sessionLength >= 59)
+    //   return;
     
     props.increaseSession();
   }
