@@ -45,7 +45,13 @@ class Timer extends React.Component {
   decreaseTimer() {
     switch(this.state.timerSeconds) {
       case 0:
-        if(this.)
+        if(this.props.timerMinutes <= 0){
+          if(this.state.inSession){
+            this.setState({
+              inSession: false
+            })
+          }
+        }
         this.props.updateTimerMinutes();
         this.setState({
           timerSeconds: 59
