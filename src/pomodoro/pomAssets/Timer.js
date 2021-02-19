@@ -7,7 +7,6 @@ class Timer extends React.Component {
     super();
     
     this.state = {
-      inSession: true,
       timerSeconds: 0,
       intervalId: 0,
       onPlay: false
@@ -46,16 +45,12 @@ class Timer extends React.Component {
     switch(this.state.timerSeconds) {
       case 0:
         if(this.props.timerMinutes <= 0){
-          if(this.state.inSession){
-            this.setState({
-              inSession: false
-            })
-            this.props.toggleInterval(this.state.inSession)
+          if(this.props.inSession){        
+            this.props.toggleInterval(this.props.inSession)
+            this.toggleSession(false)
           } else {
-            this.setState({
-              inSession: true
-            })
-            this.props.toggleInterval(this.state.inSession)
+            this.props.toggleInterval(this.props.inSession)
+            this.toggleSession(true)
           }
         }
         this.props.updateTimerMinutes();
@@ -83,8 +78,8 @@ class Timer extends React.Component {
     
     this.setState({
       timerSeconds: 0,
-      inSession: true
     })
+    this.props.toggleSession();
     this.props.resetMinutes();
   }
  
@@ -93,8 +88,8 @@ class Timer extends React.Component {
       <section>       
         <div className="timer-area">
           <button onClick={this.playStop}>{this.state.onPlay ? "❚❚" : "►"}</button>
-          <section className={`timer ${this.state.inSession ? "white" : "orange"}`}>
-            <h4 className="session">{this.state.inSession === true ?
+          <section className={`timer ${this.props.inSession ? "white" : "orange"}`}>
+            <h4 className="session">{this.props.inSession === true ?
                 "Session" : "Break"}</h4>
             <span>{this.props.timerMinutes === 0 ? "00" :
               this.props.timerMinutes < 10 ? "0" + this.props.timerMinutes :

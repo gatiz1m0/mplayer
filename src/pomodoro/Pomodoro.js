@@ -10,6 +10,7 @@ class Pomodoro extends React.Component {
     super();
     
     this.state = {
+      inSession: true,
       breakLength: 5,
       sessionLength: 15,
       timerMinutes: 15
@@ -22,6 +23,7 @@ class Pomodoro extends React.Component {
     this.onUpdateTimerMinutes = this.onUpdateTimerMinutes.bind(this)
     this.onToggleInterval = this.onToggleInterval.bind(this)
     this.resetMinutes = this.resetMinutes.bind(this)
+    this.toggleSession = this.toggleSession.bind(this)
   }
   
   onIncreaseBreakLength() {
@@ -116,6 +118,12 @@ class Pomodoro extends React.Component {
     }
   }
   
+  toggleSession(value) {
+    this.setState({
+      inSession: value
+    })
+  }
+  
   render() {
     return (
       <div className='main'>
@@ -143,11 +151,13 @@ class Pomodoro extends React.Component {
         </div>
         <div className="timer-area">
             <Timer
+              inSession={this.state.inSession}
               timerMinutes={this.state.timerMinutes}
               breakLength={this.state.breakLength}
               toggleInterval={this.onToggleInterval}
               updateTimerMinutes={this.onUpdateTimerMinutes}
               resetMinutes={this.resetMinutes}
+              toggleSession={this.toggleSession}
               className="timer" />
           </div>
       </div>
