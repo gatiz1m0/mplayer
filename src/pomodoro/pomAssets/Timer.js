@@ -47,10 +47,10 @@ class Timer extends React.Component {
         if(this.props.timerMinutes <= 0){
           if(this.props.inSession){        
             this.props.toggleInterval(this.props.inSession)
-            this.toggleSession(false)
+            this.props.toggleSession(false)
           } else {
             this.props.toggleInterval(this.props.inSession)
-            this.toggleSession(true)
+            this.props.toggleSession(true)
           }
         }
         this.props.updateTimerMinutes();
@@ -79,7 +79,7 @@ class Timer extends React.Component {
     this.setState({
       timerSeconds: 0,
     })
-    this.props.toggleSession();
+    this.props.props.toggleSession(true);
     this.props.resetMinutes();
   }
  
