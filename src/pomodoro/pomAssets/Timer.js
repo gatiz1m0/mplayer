@@ -82,7 +82,9 @@ class Timer extends React.Component {
           <section className="timer">
             <h4 className="session">{this.state.inSession === true ?
                 "Session" : "Break"}</h4>
-            <span>{this.props.timerMinutes}</span>
+            <span>{this.props.timerMinutes <= 10 ? "0" : this.state.timerMinutes :
+              this.state.timerMinutes}
+            </span>
             <span>:</span>
             <span>{this.state.timerSeconds === 0 ? "00" :
               this.state.timerSeconds < 10 ? "0" + this.state.timerSeconds :

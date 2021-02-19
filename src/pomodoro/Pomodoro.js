@@ -34,8 +34,16 @@ class Pomodoro extends React.Component {
   
   onDecreaseBreakLength() {
     this.setState( (prevState) => {
-      return {
-        breakLength: prevState.breakLength - 1
+      if(prevState.sessionLength <= 1) {
+        return {
+          sessionLength: 59,
+          timerMinutes: 59
+        }
+      } else {
+        return {
+          sessionLength: prevState.sessionLength - 1,
+          timerMinutes: prevState.timerMinutes - 1
+        }
       }
     })
   }
@@ -51,7 +59,7 @@ class Pomodoro extends React.Component {
         return {
           sessionLength: prevState.sessionLength + 1,
           timerMinutes: prevState.timerMinutes + 1
-      }
+        }
       }
     })
   }
