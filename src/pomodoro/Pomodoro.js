@@ -62,6 +62,7 @@ class Pomodoro extends React.Component {
       } else {
         return {
           sessionLength: length + 1,
+          if()
           timerMinutes: length + 1
         }
       }
