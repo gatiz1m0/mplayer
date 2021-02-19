@@ -3,13 +3,15 @@ import React from 'react'
 import './Intervals.css'
 
 function SessionLength (props) {
+  let length = props.sessionLength
   const increaseSession = () => {  
-    let length = props.sessionLength
+    
     props.increaseSession(length);
   }
   
   const decreaseSession = () => {
-    props.decreaseSession();
+    //let length = props.sessionLength
+    props.decreaseSession(length);
   }
   
   return(
