@@ -158,7 +158,7 @@ class Pomodoro extends React.Component {
         <div className="setters-area">
           <section className="setter-space">
             <BreakInterval
-              breakInterval={this.state.breakLength} 
+              breakLength={this.state.breakLength} 
               increaseBreak={this.onIncreaseBreakLength}
               decreaseBreak={this.onDecreaseBreakLength}
             />
