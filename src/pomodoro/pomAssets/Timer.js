@@ -15,7 +15,7 @@ class Timer extends React.Component {
 
     this.playStop = this.playStop.bind(this)
     this.reset = this.reset.bind(this)
-    this.decreaseTimer = this.decreaseTimer.bind(this)
+    this.clock = this.clock.bind(this)
     this.togglePlay = this.togglePlay.bind(this)
   }
   
@@ -32,7 +32,7 @@ class Timer extends React.Component {
     //console.log("onPlay is " + this.state.onPlay)
     
     if(this.state.onPlay){
-      let intervalId = setInterval(this.decreaseTimer, 1000);
+      let intervalId = setInterval(this.clock, 1000);
 
       this.setState({
         intervalId: intervalId
@@ -42,7 +42,7 @@ class Timer extends React.Component {
     }
   }
   
-  decreaseTimer() {
+  clock() {
     switch(this.state.timerSeconds) {
       case 0:
         if(this.props.timerMinutes <= 0){
