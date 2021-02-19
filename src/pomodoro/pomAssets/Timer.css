@@ -1,6 +1,8 @@
 .timer-area {
   display: flex;
   align-items: center;
+  background-color: #e7e7e7;
+  border-radius: 30px;
 }
 
 .timer {
@@ -8,7 +10,7 @@
   font-size: 26px !important;
   margin: 10px;
   padding: 0 5px;
-  background-color: #e7e7e7;
+  background-color: white;
   border-radius: 20px;
 }
 
