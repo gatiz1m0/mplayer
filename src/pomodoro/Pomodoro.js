@@ -66,7 +66,7 @@ class Pomodoro extends React.Component {
   
   onDecreaseSessionLength() {
     this.setState( (prevState) => {
-      if(this.state.sessionLength === 1 || this.state.sessionLength <= 2) {
+      if(prevState.timerMinutes === 1) {
         //console.log("sessionLength in onDecreseSessionLength is " + this.state.sessionLength)
         return {
           sessionLength: 59,
