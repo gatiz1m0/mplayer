@@ -79,7 +79,7 @@ class Timer extends React.Component {
     this.setState({
       timerSeconds: 0,
     })
-    this.props.props.toggleSession(true);
+    this.props.toggleSession(true);
     this.props.resetMinutes();
   }
  

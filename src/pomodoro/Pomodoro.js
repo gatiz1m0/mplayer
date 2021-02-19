@@ -36,6 +36,11 @@ class Pomodoro extends React.Component {
         return {
           breakLength: prevState.breakLength + 1,
         }
+        if(!this.state.inSession){
+          return {
+            timerMinutes: length + 1
+          }
+        }
       }
     })
   }
@@ -49,6 +54,11 @@ class Pomodoro extends React.Component {
       } else {
         return {
           breakLength: prevState.breakLength - 1,
+        }
+        if(!this.state.inSession){
+          return {
+            timerMinutes: length - 1
+          }
         }
       }
     })
@@ -64,8 +74,11 @@ class Pomodoro extends React.Component {
       } else {
         return {
           sessionLength: length + 1,
-          //
-          timerMinutes: length + 1
+        }
+        if(this.state.inSession){
+          return {
+            timerMinutes: length + 1
+          }
         }
       }
     })
@@ -84,7 +97,11 @@ class Pomodoro extends React.Component {
         //console.log("in onDecreseSessionLength")
         return {        
           sessionLength: length - 1,
-          timerMinutes: length - 1
+        }
+        if(this.state.inSession){
+          return {
+            timerMinutes: length - 1
+          }
         }
       }
     })
