@@ -28,9 +28,14 @@ class Pomodoro extends React.Component {
   
   onIncreaseBreakLength(length) {
     this.setState( (prevState) => {
-      if(prevState.breakLength >= 59) {
+      if(!this.state.inSession && prevState.breakLength >= 59) {
         return {
           breakLength: 1,
+          timerMinutes: 1
+        }
+      } else if(prevState.breakLength >= 59) {
+        return {
+          breakLength: 1
         }
       } else {
         if(!this.state.inSession){
@@ -40,7 +45,7 @@ class Pomodoro extends React.Component {
           }
         } else {
           return {
-            breakLength: length + 1,
+            breakLength: length + 1
           }
         }
       }
@@ -49,19 +54,24 @@ class Pomodoro extends React.Component {
   
   onDecreaseBreakLength(length) {
     this.setState( (prevState) => {
-      if(prevState.breakLength <= 1) {
+      if(!this.state.inSession && prevState.breakLength <= 1) {
         return {
-          breakLength: 59,       
+          breakLength: 59,
+          timerMinutes: 59
         }
-      } else {
+      } else if(prevState.breakLength <= 1) {
         if(!this.state.inSession){
           return {
-            breakLength: length - 1,
-            timerMinutes: length - 1
+            breakLength: length - 1
           }
         } else {
-          return {
-            breakLength: length - 1,
+          if(!this.state.inSession ) {
+            return {
+              breakLength: length - 1,
+              timerMinutes: length - 1
+            }
+          } else {
+            breakLength: length - 1
           }
         }
       }
@@ -77,7 +87,7 @@ class Pomodoro extends React.Component {
         }
       } else if(prevState.sessionLength >= 59) {
         return {
-          sessionLength: 1,
+          sessionLength: 1
         }
       } else {
         if(this.state.inSession){
@@ -87,7 +97,7 @@ class Pomodoro extends React.Component {
           }
         } else {
           return {
-            sessionLength: length + 1,
+            sessionLength: length + 1
           }
         }
       }
@@ -103,7 +113,7 @@ class Pomodoro extends React.Component {
         }
       } else if(prevState.sessionLength <= 1) {
         return {
-          sessionLength: 59,
+          sessionLength: 59
         }
       }
       else {
@@ -114,7 +124,7 @@ class Pomodoro extends React.Component {
           }
         } else {
           return {
-            sessionLength: length - 1,
+            sessionLength: length - 1
           }
         }
       }
