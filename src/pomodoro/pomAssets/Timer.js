@@ -45,6 +45,7 @@ class Timer extends React.Component {
   decreaseTimer() {
     switch(this.state.timerSeconds) {
       case 0:
+        if(this.)
         this.props.updateTimerMinutes();
         this.setState({
           timerSeconds: 59
@@ -92,7 +93,7 @@ class Timer extends React.Component {
               this.state.timerSeconds}
             </span>
           </section>
-          <button onClick={this.reset}>Set</button>
+          <button onClick={this.reset}>Reset</button>
         </div>
       </section>      
     )

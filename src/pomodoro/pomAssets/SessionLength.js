@@ -13,9 +13,9 @@ function SessionLength (props) {
   
   return(
     <section className="interval-container">
-    <button onClick={decreaseSession}>▼</button>
-    <p>{props.sessionLength}</p>
-    <button onClick={increaseSession}>▲</button>
+      <button onClick={decreaseSession}>▼</button>
+      <p>{props.sessionLength}</p>
+      <button onClick={increaseSession}>▲</button>
     </section>
   )
 }
