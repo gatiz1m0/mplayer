@@ -111,21 +111,21 @@ class Pomodoro extends React.Component {
           <h3>Study Clock</h3>
         </div>
         <div className="setters-area">
-          <section>
-            <h4>Break length</h4>
+          <section className="setter-space">
             <BreakInterval
               breakInterval={this.state.breakLength} 
               increaseBreak={this.onIncreaseBreakLength}
               decreaseBreak={this.onDecreaseBreakLength}
             />
+            <h4>Break length</h4>
           </section>
-          <section>
-            <h4>Session length</h4>
+          <section className="setter-space">         
             <SessionLength 
               sessionLength={this.state.sessionLength} 
               increaseSession={this.onIncreaseSessionLength}
               decreaseSession={this.onDecreaseSessionLength}
             />
+            <h4>Session length</h4>
           </section>        
         </div>
         <div className="timer-area">
