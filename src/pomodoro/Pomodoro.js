@@ -44,7 +44,8 @@ class Pomodoro extends React.Component {
     this.setState( (prevState) => {
       if(prevState.sessionLength >= 59) {
         return {
-          sessionLength: 1
+          sessionLength: 1,
+          timerMinutes: 1
         }
       } else {
         return {
