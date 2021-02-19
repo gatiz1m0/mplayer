@@ -3,17 +3,11 @@ import React from 'react'
 import './Intervals.css'
 
 function SessionLength (props) {
-  const increaseSession = () => {
-    // if(props.sessionLength >= 59)
-    //   return;
-    
+  const increaseSession = () => {  
     props.increaseSession();
   }
   
   const decreaseSession = () => {
-    if(props.sessionLength <= 1)
-      return;
-    
     props.decreaseSession();
   }
   
