@@ -52,6 +52,7 @@ class Pomodoro extends React.Component {
       if(prevState.breakLength <= 1) {
         return {
           breakLength: 59,
+          
         }
       } else {
         if(!this.state.inSession){
