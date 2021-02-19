@@ -4,7 +4,8 @@ import './Intervals.css'
 
 function SessionLength (props) {
   const increaseSession = () => {  
-    props.increaseSession();
+    let length = props.sessionLength
+    props.increaseSession(length);
   }
   
   const decreaseSession = () => {
