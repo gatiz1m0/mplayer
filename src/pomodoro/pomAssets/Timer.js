@@ -63,8 +63,13 @@ class Timer extends React.Component {
   reset() {
     this.setState( (prevState) => {
       return {
-        onPlay: false
+        onPlay: true  // So when we call playStop down here it will pause the clock
       }
+    })
+    this.playStop();
+    
+    this.setState({
+      timerSeconds: 0
     })
   }
  
