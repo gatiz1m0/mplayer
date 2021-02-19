@@ -132,7 +132,7 @@ class Pomodoro extends React.Component {
             <Timer
               timerMinutes={this.state.timerMinutes}
               breakLength={this.state.breakLength}
-              toggleAction={this.onToggleInterval}
+              toggleInterval={this.onToggleInterval}
               updateTimerMinutes={this.onUpdateTimerMinutes}
               resetMinutes={this.resetMinutes}
               className="timer" />
