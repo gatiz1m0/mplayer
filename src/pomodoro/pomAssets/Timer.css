@@ -22,6 +22,14 @@
   margin: 5px;
 }
 
+.session .white {
+  background-color: white;
+}
+
+.session .orange {
+  background-color: orange;
+}
+
 .timer-area > button {
   height: 35px;
   width: 52px;
