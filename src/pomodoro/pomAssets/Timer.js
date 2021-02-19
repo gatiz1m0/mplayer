@@ -16,14 +16,19 @@ class Timer extends React.Component {
     this.playStop = this.playStop.bind(this)
     this.reset = this.reset.bind(this)
     this.decreaseTimer = this.decreaseTimer.bind(this)
+    this.togglePlay = this.togglePlay.bind(this)
   }
   
-  playStop() {
+  togglePlay() {
     this.setState( (prevState) => {
       return {
         onPlay: !prevState.onPlay
       }
     })
+  }
+  
+   async playStop() { // This needs to be asynchronous as values don't changed in a time linear fashion
+    await this.togglePlay();
     //console.log("onPlay is " + this.state.onPlay)
     
     if(this.state.onPlay){
@@ -56,14 +61,18 @@ class Timer extends React.Component {
   }
 
   reset() {
-    
+    this.setState( (prevState) => {
+      return {
+        onPlay: false
+      }
+    })
   }
  
   render() {
     return(
       <section>       
         <div className="timer-area">
-          <button onClick={this.playStop}>{this.onPlay ? "❚❚" : "▶"}</button>
+          <button onClick={this.playStop}>{this.state.onPlay ? "❚❚" : "▶"}</button>
           <section className="timer">
           <h4 className="session">{this.state.inSession === true ?
               "Session" : "Break"}</h4>
