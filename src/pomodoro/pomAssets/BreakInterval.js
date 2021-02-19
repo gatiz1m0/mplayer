@@ -3,13 +3,14 @@ import React from 'react'
 import './Intervals.css'
 
 function BreakInterval(props) {
+  let length = props.sessionLength
   
   const increaseCounter = () => {
-    props.increaseBreak();
+    props.increaseBreak(length);
   }
   
   const decreaseCounter = () => {
-    props.decreaseBreak();
+    props.decreaseBreak(length);
   }
   
   return (
