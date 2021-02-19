@@ -71,6 +71,7 @@ class Timer extends React.Component {
     this.setState({
       timerSeconds: 0
     })
+    this.props.resetMinutes();
   }
  
   render() {
@@ -79,14 +80,15 @@ class Timer extends React.Component {
         <div className="timer-area">
           <button onClick={this.playStop}>{this.state.onPlay ? "❚❚" : "▶"}</button>
           <section className="timer">
-          <h4 className="session">{this.state.inSession === true ?
-              "Session" : "Break"}</h4>
-          <span>{this.props.timerMinutes}</span>
-          <span>:</span>
-          <span>{this.state.timerSeconds === 0 ? "00" :
-            this.state.timerSeconds < 10 ? "0" + this.state.timerSeconds :
-            this.state.timerSeconds}</span>
-        </section>
+            <h4 className="session">{this.state.inSession === true ?
+                "Session" : "Break"}</h4>
+            <span>{this.props.timerMinutes}</span>
+            <span>:</span>
+            <span>{this.state.timerSeconds === 0 ? "00" :
+              this.state.timerSeconds < 10 ? "0" + this.state.timerSeconds :
+              this.state.timerSeconds}
+            </span>
+          </section>
           <button onClick={this.reset}>Set</button>
         </div>
       </section>
