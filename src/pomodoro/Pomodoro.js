@@ -156,11 +156,12 @@ class Pomodoro extends React.Component {
     let repetitions = 2 
     while(repetitions > 0) {
       this.currentTime = 0;
-      this.play();
+      this.alarm.play();
       repetitions--
     }
-  }, false);
-    this.alarm.play();
+    this.alarm.removeEventListener('ended');
+  });
+    //this.alarm.play();
     if(inSession) {
       this.setState({
         timerMinutes: this.state.sessionLength
