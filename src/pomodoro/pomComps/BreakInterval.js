@@ -16,8 +16,8 @@ function BreakInterval(props) {
   return (
     <section className="interval-container">
       <button onClick={decreaseCounter}>▼</button>      
-      <p>{props.breakLength === 0 ? "00" :
-              props.breakLength < 10 ? "0" + this.props.breakLength :
+      <p>{this.props.breakLength === 0 ? "00" :
+              this.props.breakLength < 10 ? "0" + this.props.breakLength :
               this.props.breakLength}</p>
       <button onClick={increaseCounter}>▲</button>
     </section>
