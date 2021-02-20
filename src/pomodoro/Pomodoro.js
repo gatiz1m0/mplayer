@@ -5,7 +5,6 @@ import "./Pomodoro.css"
 import BreakInterval from './pomComps/BreakInterval'
 import SessionLength from './pomComps/SessionLength'
 import Timer from './pomComps/Timer'
-import audioFile from 'https://cdn.glitch.com/74776b2a-fe6f-4641-9298-f5540b1b0e3e%2FNotification%20Multimedia%20Game%20Alert%2022.wav?v=1613788569253'
 
 class Pomodoro extends React.Component {
   constructor() {
@@ -18,7 +17,8 @@ class Pomodoro extends React.Component {
       timerMinutes: 15
     }
     
-    const sound = new UIfx({asset: audioFile})
+    const audioFile = 'https://cdn.glitch.com/74776b2a-fe6f-4641-9298-f5540b1b0e3e%2FNotification%20Multimedia%20Game%20Alert%2022.wav?v=1613788569253'
+    const alarm = new UIfx({asset: audioFile})
     
     this.onIncreaseBreakLength = this.onIncreaseBreakLength.bind(this)
     this.onDecreaseBreakLength = this.onDecreaseBreakLength.bind(this)
@@ -153,11 +153,12 @@ class Pomodoro extends React.Component {
   
   onToggleInterval(inSession) {
     if(inSession) {
-      
+      this.alarm.play();
       this.setState({
         timerMinutes: this.state.sessionLength
       })
     } else {
+      this.alarm.play();
       this.setState({
         timerMinutes: this.state.breakLength
       })
