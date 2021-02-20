@@ -83,6 +83,7 @@ class Pomodoro extends React.Component {
   }
   
   onIncreaseSessionLength(length) {
+    this.alarm.play();
     this.setState( (prevState) => {
       if(this.state.inSession && prevState.sessionLength >= 59) {
         return {
