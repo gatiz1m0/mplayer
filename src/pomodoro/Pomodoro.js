@@ -17,9 +17,6 @@ class Pomodoro extends React.Component {
       timerMinutes: 15
     }
     
-    let audioFile = 'https://cdn.glitch.com/74776b2a-fe6f-4641-9298-f5540b1b0e3e%2Falarm.mp3?'
-    const alarm = new UIfx({asset: audioFile})
-    
     this.onIncreaseBreakLength = this.onIncreaseBreakLength.bind(this)
     this.onDecreaseBreakLength = this.onDecreaseBreakLength.bind(this)
     this.onIncreaseSessionLength = this.onIncreaseSessionLength.bind(this)
@@ -83,7 +80,6 @@ class Pomodoro extends React.Component {
   }
   
   onIncreaseSessionLength(length) {
-    this.alarm.play();
     this.setState( (prevState) => {
       if(this.state.inSession && prevState.sessionLength >= 59) {
         return {
@@ -154,12 +150,10 @@ class Pomodoro extends React.Component {
   
   onToggleInterval(inSession) {
     if(inSession) {
-      this.alarm.play();
       this.setState({
         timerMinutes: this.state.sessionLength
       })
     } else {
-      this.alarm.play();
       this.setState({
         timerMinutes: this.state.breakLength
       })
