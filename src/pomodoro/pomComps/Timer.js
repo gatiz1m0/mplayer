@@ -88,7 +88,7 @@ class Timer extends React.Component {
       <section>       
         <div className="timer-area">
           <button onClick={this.playStop}>{this.state.onPlay ? "❚❚" : "►"}</button>
-          <section className={`timer ${this.props.inSession ? "white" : "orange"}`}>
+          <section className={`timer ${this.props.inSession ? "session" : "break"}`}>
             <h4 className="session">{this.props.inSession === true ?
                 "Session" : "Break"}</h4>
             <span>{this.props.timerMinutes === 0 ? "00" :
