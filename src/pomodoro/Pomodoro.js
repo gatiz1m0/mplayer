@@ -17,6 +17,9 @@ class Pomodoro extends React.Component {
       timerMinutes: 15
     }
     
+    this.audiofile = 'https://cdn.glitch.com/74776b2a-fe6f-4641-9298-f5540b1b0e3e%2Falarm.mp3?v=1613794624696'
+    this.alarm = new Audio(this.audiofile)
+    
     this.onIncreaseBreakLength = this.onIncreaseBreakLength.bind(this)
     this.onDecreaseBreakLength = this.onDecreaseBreakLength.bind(this)
     this.onIncreaseSessionLength = this.onIncreaseSessionLength.bind(this)
@@ -149,6 +152,7 @@ class Pomodoro extends React.Component {
   }
   
   onToggleInterval(inSession) {
+    this.alarm.play();
     if(inSession) {
       this.setState({
         timerMinutes: this.state.sessionLength
