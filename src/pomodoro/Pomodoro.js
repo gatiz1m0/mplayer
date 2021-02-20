@@ -12,9 +12,9 @@ class Pomodoro extends React.Component {
     
     this.state = {
       inSession: true,
-      breakLength: 5,
-      sessionLength: 15,
-      timerMinutes: 15
+      breakLength: 10,
+      sessionLength: 25,
+      timerMinutes: 25
     }
     
     this.audiofile = 'https://cdn.glitch.com/74776b2a-fe6f-4641-9298-f5540b1b0e3e%2Falarm.mp3?v=1613794624696'

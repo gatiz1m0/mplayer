@@ -16,7 +16,7 @@ button {
   margin: 2px 5px;
   height: 25px;
   width: 45px;
-  background-color: #f84f22;
+  background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(19,37,115,1) 0%, rgba(19,37,115,1) 36%, rgba(4,173,227,1) 100%);
   border: none;
   outline: none;
   cursor: pointer;
@@ -25,5 +25,5 @@ button {
 }
 
 button:hover {
-  background-color: orange;
+  background: #132573;
 }
