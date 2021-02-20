@@ -14,7 +14,7 @@
   border-radius: 20px;
 }
 
-.activity {
+.session {
   background-color: white;
 }
 
@@ -22,11 +22,11 @@
   background-color: orange;
 }
 
-.session {
+.activity {
   margin: 0 10px;
   display: flex;
   align-items: center;
-  padding:1px 5px;
+  padding: 1px 5px;
   margin: 5px;
 }
 

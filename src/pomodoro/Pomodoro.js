@@ -152,6 +152,10 @@ class Pomodoro extends React.Component {
   }
   
   onToggleInterval(inSession) {
+  this.alarm.addEventListener('ended', function() {
+this.currentTime = 0;
+this.play();
+}, false);
     this.alarm.play();
     if(inSession) {
       this.setState({
