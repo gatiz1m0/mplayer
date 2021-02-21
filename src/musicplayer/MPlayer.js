@@ -4,7 +4,15 @@ import './MPlayer.css'
 
 const MPlayer = () => {
   const [songs, setSongs] = useState([
-    
+    {
+      title: "Song 1",
+      artist: "from Soundstripe",
+      art: "",
+      src: ""
+    },
+    {
+      
+    }
   ])
   
   return (
