@@ -1,6 +1,6 @@
-import React from "react";
+import React from "react"
 
-import Pomodoro from "./pomodoro/Pomodoro"
+import MPlayer from'./musicplayer/MPlayer'
 
 const App = () => {
 
