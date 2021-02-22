@@ -6,7 +6,7 @@ const App = () => {
 
   return (
     <div>
-      <MPlayer />
+      <MPlayerBox />
     </div>
   );
 
