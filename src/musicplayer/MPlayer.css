@@ -24,20 +24,6 @@
   margin: 2px;
 }
 
-.title h2 {
-  padding: 2px;
-  font-size: 16;
-}
-
-.title h3 {
-  font-size: 14px;
-  background-color: #132573;
-  color: white;
-  border-radius: 20px;
-  margin-bottom:4px;
-  padding: 0 12px;
-}
-
-h4 {
-  font-size: 12px !important;
+.c-player {
+  
 }

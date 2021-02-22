@@ -19,11 +19,11 @@ const MPlayer = () => {
   ])
   
   return (
-    <div className='mplayer'>
+    <div className='c-player'>
       <div className="main">
-     <p className="title">Study&Chill</p>
+        <p className="title">Study&Chill</p>
       </div>
-    </div>div>
+    </div>
   )
 }
 
