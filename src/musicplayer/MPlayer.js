@@ -11,12 +11,19 @@ const MPlayer = () => {
       trackSrc: "https://cdn.glitch.com/7c6c6fcd-6b82-4a23-8d7a-b681e58e72ea%2FSong1.mp3?v=1613951915184"
     },
     {
-     title: "Song 2",
+      title: "Song 2",
       artist: "from Soundstripe",
       artSrc: "https://cdn.glitch.com/7c6c6fcd-6b82-4a23-8d7a-b681e58e72ea%2Fmaxresdefault.jpg?v=1613952236992",
       trackSrc: "https://cdn.glitch.com/7c6c6fcd-6b82-4a23-8d7a-b681e58e72ea%2FSong2.mp3?v=1613951927783"
+    },
+    {
+      title: "Old Skool",
+      artist: 
     }
   ])
+  
+  const [currentSongIndex, setCurrentSongIndex] = useState(0);
+  const [nextSongIndex, setNextSongIndex] = useState(currentSongIndex + 1)
   
   return (
     <div className='main'>
