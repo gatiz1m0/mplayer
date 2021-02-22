@@ -19,10 +19,16 @@ const MPlayer = () => {
   ])
   
   return (
-    <div className='c-player'>
-      <div className="main">
+    <div className='main'>
+      <div className="c-player">
         <p className="title">Study&Chill</p>
       </div>
+      <audio></audio>
+      <h4>Playing now</h4>
+      {/* details */}
+      {/* controls */}
+      <p><strong>Next:</strong>Song 3 by Artist</p>
+      
     </div>
   )
 }
