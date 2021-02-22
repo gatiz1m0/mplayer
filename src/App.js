@@ -1,12 +1,12 @@
 import React from "react"
 
-import MPlayer from'./musicplayer/MPlayer'
+import MPlayerApp from'./musicplayer/MPlayerApp'
 
 const App = () => {
 
   return (
     <div>
-      <MPlayerBox />
+      <MPlayerApp />
     </div>
   );
 

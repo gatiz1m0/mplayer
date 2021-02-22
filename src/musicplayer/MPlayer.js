@@ -2,7 +2,7 @@ import React from 'react'
 
 import './MPlayer.css'
 
-const MPlayer = () => {
+const MPlayer = (props) => {
   
   return(
     <div className="c-player">
@@ -11,7 +11,7 @@ const MPlayer = () => {
       <h4>Playing now</h4>
       {/* details */}
       {/* controls */}
-      <p><strong>Next:</strong>Song 3 by Artist</p>
+      <p><strong>Next:</strong>{props.nextSong.title} by {props.nextSong.artist}</p>
     </div>
   )
 }
