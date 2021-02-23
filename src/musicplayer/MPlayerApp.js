@@ -6,14 +6,14 @@ import MPlayer from './MPlayer'
 const MPlayerApp = () => {
   const [songs, setSongs] = useState([
     {
-      title: "Song 1",
-      artist: "Soundstripe",
+      title: "Girl in the sun",
+      artist: "Concert Fiends",
       artSrc: "https://cdn.glitch.com/7c6c6fcd-6b82-4a23-8d7a-b681e58e72ea%2Fmaxresdefault.jpg?v=1613952236992",
       trackSrc: "https://cdn.glitch.com/7c6c6fcd-6b82-4a23-8d7a-b681e58e72ea%2FSong1.mp3?v=1613951915184"
     },
     {
-      title: "Song 2",
-      artist: "Soundstripe",
+      title: "Domo Arigato",
+      artist: "Tomato Ikatsu",
       artSrc: "https://cdn.glitch.com/7c6c6fcd-6b82-4a23-8d7a-b681e58e72ea%2Fmaxresdefault.jpg?v=1613952236992",
       trackSrc: "https://cdn.glitch.com/7c6c6fcd-6b82-4a23-8d7a-b681e58e72ea%2FSong2.mp3?v=1613951927783"
     },
@@ -31,10 +31,12 @@ const MPlayerApp = () => {
   return (
     <div className='main'>
       <p className="title">Study&Chill</p>
-      <MPlayer 
-        song={songs[currentSongIndex]} 
-        nextSong={songs[nextSongIndex]} 
-      />
+      <div className="player">
+        <MPlayer 
+          song={songs[currentSongIndex]} 
+          nextSong={songs[nextSongIndex]} 
+        />
+      </div>
     </div>
   )
 }

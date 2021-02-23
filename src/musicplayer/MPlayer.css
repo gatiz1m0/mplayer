@@ -1,0 +1,23 @@
+.player-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.c-player {
+  display: flex;
+  flex-direction: column; 
+}
+
+.song-img > img {
+  height: 70px;
+  margin: 3px;
+  border-radius: 20px;
+}
+
+.controls {
+  margin: 3px 5px;
+}
+
+.controls > p {
+  margin: 10px 5px;
+}
